@@ -33,7 +33,11 @@ Route::controller(productoController::class)->group(function(){
 
     route::put('producto/{producto}','update')->name('producto.update');
     //8. RUTA PARA LA ELIMINACION DE REGISTRO 
-    Route::delete('eliminar/{id}', 'destroy')->name('producto.eliminar'); 
+    Route::delete('borrar/{id}', 'destroy')->name('producto.borrar'); 
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

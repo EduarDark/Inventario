@@ -47,7 +47,7 @@
                         <span class="inline-block w-1/3 md:hidden font-bold">Operaciones</span>
                         <a href="{{ route('producto.mostrar', $produ->id) }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded">Ver</a>
                         <a href="{{ route('producto.editar', $produ->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Editar</a>
-                        <form action="{{ route('producto.eliminar', $produ->id) }}" method="POST" class="inline-block" onsubmit="return confirm('¿Confirma eliminar?')">
+                        <form action="{{ route('producto.borrar', $produ->id) }}" method="POST" class="inline-block" onsubmit="return confirm('¿Confirma eliminar?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Eliminar</button>
